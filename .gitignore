@@ -1,0 +1,22 @@
+node_modules
+dist
+dist-ssr
+*.local
+
+# Salida de `tsc -b` (los .ts son la fuente, esto se regenera en cada build)
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+.claude/
