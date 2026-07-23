@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+
+  "//": "El rewrite manda cualquier ruta a index.html: sin él, recargar /emprendimientos daría 404 porque el enrutado lo hace React en el navegador, no el servidor.",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+
+  "headers": [
+    {
+      "//": "Las fotos NO llevan hash en el nombre (portada.webp se reemplaza in situ), así que no se puede usar immutable: se serviría la versión vieja durante un año. Con esto la caché responde al instante y revalida en segundo plano, tomando los cambios al día siguiente.",
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
+    }
+  ]
+}

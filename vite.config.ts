@@ -2,10 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { fileURLToPath, URL } from 'node:url'
 
-// El sitio se sirve desde https://<usuario>.github.io/Haku-Winay-Noa-Jayatai/
-// por eso la ruta base debe coincidir con el nombre del repositorio.
+// El sitio se sirve desde la raíz del dominio en Vercel, por eso base es '/'.
+// (Antes era '/Haku-Winay-Noa-Jayatai/' porque GitHub Pages lo publicaba dentro
+// de una subcarpeta con el nombre del repo. Si se retoma Pages, hay que volver
+// a poner esa subruta aquí o los assets darán 404.)
 export default defineConfig({
-  base: '/Haku-Winay-Noa-Jayatai/',
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {

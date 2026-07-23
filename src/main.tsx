@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-// Se usa HashRouter porque el sitio se publica en GitHub Pages (subruta del repo):
-// evita los 404 al recargar rutas internas sin necesidad de configurar el servidor.
+// BrowserRouter da URLs limpias (/emprendimientos en vez de /#/emprendimientos).
+// Depende de que el servidor devuelva index.html en cualquier ruta: eso lo
+// resuelve el rewrite de vercel.json. Un hosting sin esa regla daría 404 al
+// recargar una ruta interna.
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>,
 )
