@@ -48,7 +48,7 @@ export default function EmprendimientoDetalle() {
       {/* ===== HERO ===== */}
       <section className="relative h-[42vh] min-h-[320px] w-full overflow-hidden">
         <SmartImage
-          src={fotoEmprendimiento(nombre, 'portada.jpeg')}
+          src={fotoEmprendimiento(nombre, 'portada.webp')}
           alt={nombre}
           className="h-full w-full object-cover"
           style={{ objectPosition: 'center 55%' }}

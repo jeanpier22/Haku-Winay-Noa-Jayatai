@@ -19,7 +19,7 @@ export default function EmprendimientoCard({ e }: { e: Emprendedor }) {
           asentar los chips sin apagar la imagen. */}
       <div className="relative aspect-[4/3] overflow-hidden">
         <SmartImage
-          src={fotoEmprendimiento(e.nombre_emprendimiento, 'portada.jpeg')}
+          src={fotoEmprendimiento(e.nombre_emprendimiento, 'portada.webp')}
           alt={e.nombre_emprendimiento}
           className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.06]"
         />

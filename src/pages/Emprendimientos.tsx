@@ -36,7 +36,7 @@ export default function Emprendimientos() {
       <section className="relative overflow-hidden border-b border-white/8">
         <div className="absolute inset-0">
           <SmartImage
-            src={asset('portada.jpeg')}
+            src={asset('portada.webp')}
             alt=""
             className="h-full w-full object-cover"
             style={{ objectPosition: 'center 60%' }}

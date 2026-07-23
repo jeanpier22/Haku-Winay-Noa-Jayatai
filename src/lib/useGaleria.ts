@@ -8,7 +8,7 @@ export interface Galeria {
 }
 
 /**
- * Detecta cuántas imágenes numeradas (1.jpeg, 2.jpeg, …) existen en la carpeta
+ * Detecta cuántas imágenes numeradas (1.webp, 2.webp, …) existen en la carpeta
  * del emprendimiento, probándolas en orden hasta la primera que falla.
  * Reemplaza la recursión de <img>.onload del proyecto original.
  */
@@ -34,7 +34,7 @@ export function useGaleria(nombre: string | undefined, max = 12): Galeria {
         terminar()
         return
       }
-      const url = fotoEmprendimiento(nombre, `${n}.jpeg`)
+      const url = fotoEmprendimiento(nombre, `${n}.webp`)
       const img = new Image()
       img.onload = () => {
         if (cancelado) return

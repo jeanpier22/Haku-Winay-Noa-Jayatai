@@ -26,7 +26,7 @@ export default function Header() {
       <div className="container-page flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={asset('images/logo/logo.jpeg')}
+            src={asset('images/logo/logo.webp')}
             alt="Logo Haku Wiñay Noa Jayatai"
             className="h-9 w-9 rounded-lg object-cover ring-1 ring-white/10"
           />

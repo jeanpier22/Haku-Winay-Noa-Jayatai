@@ -18,7 +18,7 @@ export default function ProductoCard({ p }: { p: ProductoTemporada }) {
   // Se resuelve la imagen y el enlace a partir del emprendimiento real (por id),
   // no del nombre del producto — así evitamos rutas rotas por diferencias de nombre.
   const emp = getEmprendedor(p.id)
-  const img = emp ? fotoEmprendimiento(emp.nombre_emprendimiento, 'vision.jpeg') : ''
+  const img = emp ? fotoEmprendimiento(emp.nombre_emprendimiento, 'vision.webp') : ''
   const items = separarProductos(p.productos)
 
   return (

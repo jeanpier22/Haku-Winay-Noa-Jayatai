@@ -33,7 +33,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <SmartImage
-            src={asset('portada.jpeg')}
+            src={asset('portada.webp')}
             alt="Paisaje de La Unión, Arequipa"
             // Ken Burns lentísimo: la portada respira en vez de quedarse quieta.
             className="h-full w-full object-cover will-change-transform animate-ken-burns"
@@ -223,7 +223,7 @@ export default function Home() {
             loop
             playsInline
             preload="metadata"
-            poster={asset('portada.jpeg')}
+            poster={asset('portada.webp')}
           >
             <source src={asset('images/video.mp4')} type="video/mp4" />
           </video>

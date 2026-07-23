@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <img
-              src={asset('images/logo/logo.jpeg')}
+              src={asset('images/logo/logo.webp')}
               alt="Logo Haku Wiñay Noa Jayatai"
               className="h-10 w-10 rounded-lg object-cover ring-1 ring-white/10"
             />
